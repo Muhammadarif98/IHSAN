@@ -7,14 +7,18 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final int NUM_PAGES = 3;
+    private static final int NUM_PAGES = 4;
     private ViewPager viewPager;
     private ScreeSlidePagerAdapter pagerAdapter;
-
+    ImageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.pager);
         pagerAdapter = new ScreeSlidePagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(pagerAdapter);
+
+
+
 
 
     }
@@ -49,6 +56,9 @@ public class MainActivity extends AppCompatActivity {
                 case 2:
                     OnBoardingFragment3 tab3 = new OnBoardingFragment3();
                     return tab3;
+                case 3:
+                    OnBoardingFragment4 tab4 = new OnBoardingFragment4();
+                    return tab4;
             }
             return null;
         }
@@ -58,4 +68,6 @@ public class MainActivity extends AppCompatActivity {
             return NUM_PAGES;
         }
     }
+
+
 }

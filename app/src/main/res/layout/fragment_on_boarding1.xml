@@ -12,12 +12,12 @@
         android:id="@+id/imageView"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginLeft="64dp"
-        android:layout_marginTop="184dp"
+        android:layout_marginTop="172dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/img1" />
+        app:srcCompat="@drawable/f1" />
 
     <TextView
         android:id="@+id/textView"
@@ -27,6 +27,7 @@
         android:layout_marginTop="25dp"
         android:text="@string/ihsan"
         android:textSize="22sp"
+        android:textColor="#39645b"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,12 +37,12 @@
         app:layout_constraintVertical_bias="0" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/ret"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="30dp"
         android:text="Skip"
-        android:textColor="@color/black"
+        android:textColor="#39645b"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/textView"

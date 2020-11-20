@@ -5,20 +5,21 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class OnBoardingFragment2 extends Fragment {
-TextView textView;
+public class OnBoardingFragment4 extends Fragment {
+ImageView imageView;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        ViewGroup root = (ViewGroup) inflater.inflate(R.layout.fragment_on_boarding2,container,false);
-        textView = root.findViewById(R.id.ret2);
-        textView.setOnClickListener(new View.OnClickListener() {
+        View root = (ViewGroup) inflater.inflate(R.layout.fragment_on_boarding4,container,false);
+        imageView = root.findViewById(R.id.imageView3);
+        imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 tovar();
@@ -30,4 +31,5 @@ TextView textView;
         Intent intent = new Intent(getActivity(),HomeActivity.class);
         startActivity(intent);
     }
+
 }
