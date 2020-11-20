@@ -27,7 +27,7 @@ TextView textView;
         return root;
     }
     public void tovar(){
-        Intent intent = new Intent(getActivity(),HomeActivity.class);
+        Intent intent = new Intent(getActivity(),MainActivity.class);
         startActivity(intent);
     }
 }
