@@ -23,33 +23,33 @@ public class MainActivity extends AppCompatActivity {
         h1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tovar1();
+                tarikat();
             }
         });
         h2=findViewById(R.id.h2);
         h2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tovar2();
+                poleznoe();
             }
         });
         h3=findViewById(R.id.h3);
         h3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tovar3();
+                sravka();
             }
         });
     }
-    public void tovar1(){
+    public void tarikat(){
         Intent intent = new Intent(this,TarikatActivity.class);
         startActivity(intent);
     }
-    public void tovar2(){
+    public void poleznoe(){
         Intent intent = new Intent(this,PoleActivity.class);
         startActivity(intent);
     }
-    public void tovar3(){
+    public void sravka(){
         Intent intent = new Intent(this,SpravkActivity.class);
         startActivity(intent);
     }
