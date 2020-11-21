@@ -14,14 +14,14 @@ import androidx.fragment.app.Fragment;
 
 public class OnBoardingFragment4 extends Fragment {
 ImageView imageView;
-Button button;
+
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View root = (ViewGroup) inflater.inflate(R.layout.fragment_on_boarding4,container,false);
-        button = root.findViewById(R.id.start);
-        button.setOnClickListener(new View.OnClickListener() {
+        imageView = root.findViewById(R.id.start);
+        imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 tovar();

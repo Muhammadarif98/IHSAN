@@ -4,7 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity"
-    android:background="@drawable/heart2">
+    tools:context=".TarikatActivity">
 
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="118dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="188dp"
+        android:text="Tarikat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

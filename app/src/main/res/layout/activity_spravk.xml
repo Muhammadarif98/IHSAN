@@ -4,7 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity"
-    android:background="@drawable/heart2">
+    tools:context=".SpravkActivity">
 
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="192dp"
+        android:layout_height="115dp"
+        android:layout_marginStart="109dp"
+        android:layout_marginTop="265dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
