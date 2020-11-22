@@ -11,23 +11,23 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity {
 
     // Основная реализация программы
-    ImageView h1;
-    ImageView h2;
+    ImageView h1x;
+    ImageView h2x;
     ImageView h3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        h1 = findViewById(R.id.h1);
-        h1.setOnClickListener(new View.OnClickListener() {
+        h1x = findViewById(R.id.h1x);
+        h1x.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 tarikat();
             }
         });
-        h2=findViewById(R.id.h2);
-        h2.setOnClickListener(new View.OnClickListener() {
+        h2x=findViewById(R.id.h2x);
+        h2x.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 poleznoe();
