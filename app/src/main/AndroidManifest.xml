@@ -9,19 +9,33 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.IHSAN">
-        <activity android:name=".SpravkActivity"></activity>
-        <activity android:name=".PoleActivity" />
-        <activity android:name=".TarikatActivity" />
-        <activity android:name=".SplashActivity" />
-        <activity android:name=".HomeActivity">
+        android:theme="@style/AppTheme">
+        <activity android:name=".SilsilyaActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".VirdActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".CountActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".RabitaActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SpravkActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".PoleActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".TarikatActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SplashActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".HomeActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

@@ -4,15 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TarikatActivity">
+    tools:context=".TarikatActivity"
+    android:background="#898789">
 
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="118dp"
-        android:layout_height="86dp"
-        android:layout_marginStart="144dp"
-        android:layout_marginTop="188dp"
-        android:text="Tarikat"
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/rectangle_1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/rectangle_1"
+        android:text="Вирд"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <Button
+        android:id="@+id/count"
+        android:layout_width="120dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rectangle_1"
+        android:text="Счетчик"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rectangle_1"
+        android:text="Сильсиля"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/count" />
 </androidx.constraintlayout.widget.ConstraintLayout>
