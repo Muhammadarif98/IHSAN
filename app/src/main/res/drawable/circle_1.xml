@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_pressed="true" android:drawable="@drawable/round1" /> нажата
-    <item android:state_focused="true" android:drawable="@drawable/round2" /> не нажата
+    <item android:state_pressed="true" android:drawable="@drawable/roundv" /> нажата
+    <item android:state_focused="true" android:drawable="@drawable/round" /> не нажата
     <shape android:shape="oval"></shape>
-    <item android:drawable="@drawable/round1"></item>
+    <item android:drawable="@drawable/round"></item>
 </selector>

@@ -4,44 +4,83 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TarikatActivity"
-    android:background="#898789">
+    android:background="#034801"
+    tools:context=".TarikatActivity">
 
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="400dp"
+        android:layout_height="786dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.171"
+        app:srcCompat="@drawable/rama" />
 
     <Button
         android:id="@+id/count"
-        android:layout_width="231dp"
-        android:layout_height="215dp"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="264dp"
-        android:background="@drawable/circle_1"
+        android:layout_width="197dp"
+        android:layout_height="194dp"
+        android:background="@drawable/circle_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.447"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.843" />
 
-
-    <Button
-        android:id="@+id/reset"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="212dp"
-        android:background="@drawable/circle_1"
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="275dp"
+        android:layout_height="135dp"
+        app:layout_constraintBottom_toTopOf="@+id/count"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.921"
+        app:srcCompat="@drawable/schet3" />
 
     <TextView
         android:id="@+id/colichestvo"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="129dp"
-        android:layout_marginTop="64dp"
+        android:layout_width="266dp"
+        android:layout_height="93dp"
         android:gravity="center"
         android:inputType="number"
-        android:textColor="@color/black"
-        android:textSize="90sp"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="80sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/count"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:text="0" />
+        app:layout_constraintVertical_bias="0.809" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="64dp"
+        android:layout_height="70dp"
+        android:background="@drawable/circle_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.145"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.614" />
+
+    <ImageView
+        android:id="@+id/sotka"
+        android:layout_width="302dp"
+        android:layout_height="116dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.17000002"
+        app:srcCompat="@drawable/sotka" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
