@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 
 public class RabitaActivity extends AppCompatActivity {
-    ImageView imageView;
+   private ImageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

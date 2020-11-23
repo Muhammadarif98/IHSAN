@@ -13,7 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 public class OnBoardingFragment4 extends Fragment {
-ImageView imageView;
+private ImageView imageView;
 
 
     @Nullable

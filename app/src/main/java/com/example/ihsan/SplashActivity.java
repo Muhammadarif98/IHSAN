@@ -11,7 +11,7 @@ import android.os.Bundle;
 
 public class SplashActivity extends AppCompatActivity {
 
-    //Жидкие экраны сплашки и всеb
+    //Жидкие экраны сплашки и все
 
     private static final int NUM_PAGES = 4;
     private ViewPager viewPager;

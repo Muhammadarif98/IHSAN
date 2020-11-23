@@ -9,8 +9,8 @@ import android.widget.Button;
 
 
 public class TarikatActivity extends AppCompatActivity {
-    Button counter;
-    Button rabita;
+   private Button counter;
+   private Button rabita;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

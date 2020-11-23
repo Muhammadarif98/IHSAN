@@ -11,9 +11,9 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity {
 
     // Основная реализация программы
-    ImageView h1x;
-    ImageView h2x;
-    ImageView h3;
+   private ImageView h1x;
+   private ImageView h2x;
+   private ImageView h3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
