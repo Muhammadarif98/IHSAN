@@ -10,47 +10,55 @@
 
     <Button
         android:id="@+id/rabita"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="40dp"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="28dp"
         android:layout_marginTop="68dp"
-        android:text="Рабитia"
+        android:layout_marginBottom="68dp"
         android:background="@drawable/rectangle_1"
+        android:text="Рабитia"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/count"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="212dp"
-        android:layout_marginTop="72dp"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="48dp"
         android:background="@drawable/rectangle_1"
         android:text="Вирд"
+        app:layout_constraintEnd_toStartOf="@+id/button4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/rabita" />
 
     <Button
         android:id="@+id/count"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="232dp"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="68dp"
         android:background="@drawable/rectangle_1"
         android:text="Счетчик"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rabita"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="212dp"
-        android:layout_marginTop="232dp"
-        android:background="@drawable/rectangle_1"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="48dp"
 
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginEnd="23dp"
+        android:background="@drawable/rectangle_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/count" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
