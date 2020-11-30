@@ -9,15 +9,34 @@ import android.widget.Button;
 
 
 public class TarikatActivity extends AppCompatActivity {
-   private Button counter;
-   private Button rabita;
+   private Button counter,rabita,vird,silsila,home;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tarikat);
         counter = findViewById(R.id.count);
         rabita = findViewById(R.id.rabita);
-
+        vird = findViewById(R.id.vird);
+        silsila = findViewById(R.id.silsila);
+        home = findViewById(R.id.hometarikat);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                home();
+            }
+        });
+        vird.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                vird();
+            }
+        });
+        silsila.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                silsila();
+            }
+        });
         counter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -39,6 +58,18 @@ public class TarikatActivity extends AppCompatActivity {
     }
     public void rabita(){
         Intent intent = new Intent(this,RabitaActivity.class);
+        startActivity(intent);
+    }
+    public void home(){
+        Intent intent = new Intent(this,MainActivity.class);
+        startActivity(intent);
+    }
+    public void vird(){
+        Intent intent = new Intent(this,VirdActivity.class);
+        startActivity(intent);
+    }
+    public void silsila(){
+        Intent intent = new Intent(this,SilsilyaActivity.class);
         startActivity(intent);
     }
 }

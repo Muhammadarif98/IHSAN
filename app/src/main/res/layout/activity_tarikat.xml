@@ -4,9 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#898789"
+    android:background="#23232A"
     tools:context=".TarikatActivity">
 
+
+   <!-- <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="406dp"
+        android:layout_height="707dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="19dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ramarabita" />/-->
+
+    <Button
+        android:id="@+id/hometarikat"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/circle_5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.942" />
 
     <Button
         android:id="@+id/rabita"
@@ -16,21 +41,19 @@
         android:layout_marginTop="68dp"
         android:layout_marginBottom="68dp"
         android:background="@drawable/rectangle_1"
-        android:text="Рабитia"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/vird"
         app:layout_constraintEnd_toStartOf="@+id/count"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/vird"
         android:layout_width="180dp"
         android:layout_height="180dp"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="48dp"
-        android:background="@drawable/rectangle_1"
-        android:text="Вирд"
-        app:layout_constraintEnd_toStartOf="@+id/button4"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/rectangle_3"
+        app:layout_constraintEnd_toStartOf="@+id/silsila"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rabita" />
 
@@ -41,23 +64,21 @@
         android:layout_marginTop="68dp"
         android:layout_marginEnd="23dp"
         android:layout_marginBottom="68dp"
-        android:background="@drawable/rectangle_1"
-        android:text="Счетчик"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
+        android:background="@drawable/rectangle_2"
+        app:layout_constraintBottom_toTopOf="@+id/silsila"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/rabita"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/silsila"
         android:layout_width="180dp"
         android:layout_height="180dp"
-        android:layout_marginTop="48dp"
-
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="23dp"
-        android:background="@drawable/rectangle_1"
+        android:background="@drawable/rectangle_4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintStart_toEndOf="@+id/vird"
         app:layout_constraintTop_toBottomOf="@+id/count" />
 
 

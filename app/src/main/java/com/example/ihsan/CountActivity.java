@@ -69,102 +69,72 @@ public class CountActivity extends AppCompatActivity {
     public void sotka(String id) {
         if (mColichestvo.getText().toString().equals("100")) {
             sotca.setImageResource(R.drawable.sotka1);
-            //soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("200")) {
             sotca.setImageResource(R.drawable.sotka2);
-          // soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("300")) {
             sotca.setImageResource(R.drawable.sotka3);
-            //soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("400")) {
             sotca.setImageResource(R.drawable.sotka4);
-           //soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("500")) {
             sotca.setImageResource(R.drawable.sotka5);
-         //  soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("600")) {
             sotca.setImageResource(R.drawable.sotka6);
-          //  soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("700")) {
             sotca.setImageResource(R.drawable.sotka7);
-        //   soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("800")) {
             sotca.setImageResource(R.drawable.sotka8);
-         //  soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("900")) {
             sotca.setImageResource(R.drawable.sotka9);
-           // soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("1000")) {
             sotca.setImageResource(R.drawable.sotka10);
-           // soundPlay(sound);
         }
 
         else if (mColichestvo.getText().toString().equals("1001")) {
             sotca.setImageResource(R.drawable.tisyach);
         } else if (mColichestvo.getText().toString().equals("1100")) {
             sotca.setImageResource(R.drawable.tisyach1);
-         //   soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("1200")) {
             sotca.setImageResource(R.drawable.tisyach2);
-         //  soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("1300")) {
             sotca.setImageResource(R.drawable.tisyach3);
-            //soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("1400")) {
             sotca.setImageResource(R.drawable.tisyach4);
-           // soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("1500")) {
             sotca.setImageResource(R.drawable.tisyach5);
-           // soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("1600")) {
             sotca.setImageResource(R.drawable.tisyach6);
-           // soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("1700")) {
             sotca.setImageResource(R.drawable.tisyach7);
-        //   soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("1800")) {
             sotca.setImageResource(R.drawable.tisyach8);
-          //  soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("1900")) {
             sotca.setImageResource(R.drawable.tisyach9);
-         //   soundPlay(sound);
         }else if (mColichestvo.getText().toString().equals("2000")) {
             sotca.setImageResource(R.drawable.dvatisyach);
-          //  soundPlay(sound);
         }
 
         else if (mColichestvo.getText().toString().equals("2001")) {
             sotca.setImageResource(R.drawable.dvat);
         } else if (mColichestvo.getText().toString().equals("2100")) {
             sotca.setImageResource(R.drawable.dvat1);
-            //soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("2200")) {
             sotca.setImageResource(R.drawable.dvat2);
-            //soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("2300")) {
             sotca.setImageResource(R.drawable.dvat3);
-          //  soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("2400")) {
             sotca.setImageResource(R.drawable.dvat4);
-           //soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("2500")) {
             sotca.setImageResource(R.drawable.dvat5);
-           // soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("2600")) {
             sotca.setImageResource(R.drawable.dvat6);
-            //soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("2700")) {
             sotca.setImageResource(R.drawable.dvat7);
-           // soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("2800")) {
             sotca.setImageResource(R.drawable.dvat8);
-          //  soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("2900")) {
             sotca.setImageResource(R.drawable.dvat9);
-            //soundPlay(sound);
         }else if (mColichestvo.getText().toString().equals("3000")) {
             sotca.setImageResource(R.drawable.trit);
-            //soundPlay(sound);
         }
         }
 
@@ -175,102 +145,70 @@ public class CountActivity extends AppCompatActivity {
     }
     public void soundic() {
         if (mColichestvo.getText().toString().equals("100")) {
-            //sotca.setImageResource(R.drawable.sotka1);
             soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("200")) {
-           // sotca.setImageResource(R.drawable.sotka2);
             soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("300")) {
-            //sotca.setImageResource(R.drawable.sotka3);
             soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("400")) {
-            //sotca.setImageResource(R.drawable.sotka4);
             soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("500")) {
-            //sotca.setImageResource(R.drawable.sotka5);
             soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("600")) {
-            //sotca.setImageResource(R.drawable.sotka6);
             soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("700")) {
-            //sotca.setImageResource(R.drawable.sotka7);
             soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("800")) {
-           // sotca.setImageResource(R.drawable.sotka8);
             soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("900")) {
-            //sotca.setImageResource(R.drawable.sotka9);
             soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("1000")) {
-            //sotca.setImageResource(R.drawable.sotka10);
             soundPlay(sound);
         }
 
         else if (mColichestvo.getText().toString().equals("1001")) {
-            //sotca.setImageResource(R.drawable.tisyach);
         } else if (mColichestvo.getText().toString().equals("1100")) {
-            //sotca.setImageResource(R.drawable.tisyach1);
             soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("1200")) {
-           // sotca.setImageResource(R.drawable.tisyach2);
             soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("1300")) {
-           // sotca.setImageResource(R.drawable.tisyach3);
             soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("1400")) {
-            //sotca.setImageResource(R.drawable.tisyach4);
             soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("1500")) {
-            //sotca.setImageResource(R.drawable.tisyach5);
             soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("1600")) {
-           // sotca.setImageResource(R.drawable.tisyach6);
             soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("1700")) {
-           // sotca.setImageResource(R.drawable.tisyach7);
             soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("1800")) {
-           // sotca.setImageResource(R.drawable.tisyach8);
             soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("1900")) {
-           // sotca.setImageResource(R.drawable.tisyach9);
             soundPlay(sound);
         }else if (mColichestvo.getText().toString().equals("2000")) {
-           // sotca.setImageResource(R.drawable.dvatisyach);
             soundPlay(sound);
         }
 
         else if (mColichestvo.getText().toString().equals("2001")) {
-            //sotca.setImageResource(R.drawable.dvat);
         } else if (mColichestvo.getText().toString().equals("2100")) {
-           // sotca.setImageResource(R.drawable.dvat1);
             soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("2200")) {
-            //sotca.setImageResource(R.drawable.dvat2);
             soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("2300")) {
-            //sotca.setImageResource(R.drawable.dvat3);
             soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("2400")) {
-           // sotca.setImageResource(R.drawable.dvat4);
             soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("2500")) {
-            //sotca.setImageResource(R.drawable.dvat5);
             soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("2600")) {
-          //  sotca.setImageResource(R.drawable.dvat6);
             soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("2700")) {
-            //sotca.setImageResource(R.drawable.dvat7);
             soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("2800")) {
-           // sotca.setImageResource(R.drawable.dvat8);
             soundPlay(sound);
         } else if (mColichestvo.getText().toString().equals("2900")) {
-           // sotca.setImageResource(R.drawable.dvat9);
             soundPlay(sound);
         }else if (mColichestvo.getText().toString().equals("3000")) {
-           // sotca.setImageResource(R.drawable.trit);
             soundPlay(sound);
         }
     }

@@ -86,9 +86,9 @@ public class RabitaActivity extends AppCompatActivity implements ExampleDialog.E
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                     if (str[0].equals(spinner.getItemAtPosition(position).toString())) {
-                        imageView.setImageResource(R.drawable.shazaly);
+                        imageView.setImageResource(R.drawable.shaz);
                     } else if (str[1].equals(spinner.getItemAtPosition(position).toString())) {
-                        imageView.setImageResource(R.drawable.nakshu);
+                        imageView.setImageResource(R.drawable.nakshub);
                     }
 
                 }
@@ -164,9 +164,9 @@ public class RabitaActivity extends AppCompatActivity implements ExampleDialog.E
                soundic();
             }
         }.start();
-        sound.pause();
         updateWatchInterface();
         timerRunning = true;
+        soundic();
        // Drawable s = getResources().getDrawable(R.drawable.pausex);
        // playpause.setBackgroundDrawable(s);
     }
