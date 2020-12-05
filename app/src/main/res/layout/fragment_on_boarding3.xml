@@ -67,7 +67,7 @@
         android:layout_height="111dp"
         android:layout_marginTop="8dp"
         android:gravity="center_horizontal"
-        android:text="ا مُقَلِّبَ القُلوبِ ثَبِّتْ قلْبي عَلََى دِينِكَ "
+        android:text="يَا مُقَلِّبَ القُلوبِ ثَبِّتْ قلْبي عَلََى دِينِكَ "
         android:textColor="#dcd299"
         android:textSize="40sp"
         android:textStyle="bold"

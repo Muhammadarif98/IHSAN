@@ -21,12 +21,12 @@
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="393dp"
-        android:layout_height="573dp"
+        android:layout_width="321dp"
+        android:layout_height="534dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner2"
-        app:layout_constraintVertical_bias="0.918" />
+        app:layout_constraintVertical_bias="0.587" />
 </androidx.constraintlayout.widget.ConstraintLayout>

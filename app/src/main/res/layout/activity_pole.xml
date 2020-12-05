@@ -4,14 +4,95 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E9E9E9"
     tools:context=".PoleActivity">
 
-    <CalendarView
-        android:id="@+id/calendarView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="152dp"
+    <Button
+        android:id="@+id/dua"
+        android:layout_width="170dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/round1"
+        android:text="Дуа"
+        app:layout_constraintBottom_toTopOf="@+id/hizbu"
+        app:layout_constraintEnd_toStartOf="@+id/tavbu"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/tavbu"
+        android:layout_width="170dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/round1"
+        android:text="Тавбу"
+        app:layout_constraintBottom_toTopOf="@+id/ismun"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dua"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/hizbu"
+        android:layout_width="170dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="25dp"
+        android:background="@drawable/round1"
+        android:text="Хизбу"
+        app:layout_constraintBottom_toTopOf="@+id/salavat"
+        app:layout_constraintEnd_toStartOf="@+id/ismun"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dua" />
+
+    <Button
+        android:id="@+id/istihara"
+        android:layout_width="170dp"
+        android:layout_height="160dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="131dp"
+        android:background="@drawable/round1"
+        android:text="Истихара"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/salavat"
+        app:layout_constraintTop_toBottomOf="@+id/ismun" />
+
+    <Button
+        android:id="@+id/salavat"
+        android:layout_width="170dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="131dp"
+        android:background="@drawable/round1"
+        android:text="Салават"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/istihara"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hizbu" />
+
+    <Button
+        android:id="@+id/ismun"
+        android:layout_width="170dp"
+        android:layout_height="160dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/round1"
+        android:text="Имена Аллаха"
+        app:layout_constraintBottom_toTopOf="@+id/istihara"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/hizbu"
+        app:layout_constraintTop_toBottomOf="@+id/tavbu" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="155dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/circle_6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

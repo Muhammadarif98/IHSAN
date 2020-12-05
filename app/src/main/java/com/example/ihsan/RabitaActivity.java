@@ -29,7 +29,6 @@ import java.util.Locale;
 public class RabitaActivity extends AppCompatActivity implements ExampleDialog.ExampleDialogListener{
    private ImageView imageView;
    private TextView textV;
-   private ProgressBar progressBar;
    private Button playpause, reset,home,set;
    private long mStartTimeInMillis;
    private EditText mEditTextInput;;
@@ -50,23 +49,7 @@ public class RabitaActivity extends AppCompatActivity implements ExampleDialog.E
         set = findViewById(R.id.set);
         sound = MediaPlayer.create(this,R.raw.soundtimer);
 
-        set.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String input = mEditTextInput.getText().toString();
-                if (input.length() == 0) {
-                    Toast.makeText(RabitaActivity.this, "Поле не может быть пустым", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                long millisInput = Long.parseLong(input) * 60000;
-                if (millisInput == 0) {
-                    Toast.makeText(RabitaActivity.this, "Пожалуйста, введите положительное число", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                setTime(millisInput);
-                mEditTextInput.setText("");
-            }
-        });
+
 
         home.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,6 +83,25 @@ public class RabitaActivity extends AppCompatActivity implements ExampleDialog.E
             });
         }
 
+        set.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String input = mEditTextInput.getText().toString();
+                if (input.length() == 0) {
+                    Toast.makeText(RabitaActivity.this, "Поле не может быть пустым", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                long millisInput = Long.parseLong(input) * 60000;
+                if (millisInput == 0) {
+                    Toast.makeText(RabitaActivity.this, "Пожалуйста, введите положительное число", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                setTime(millisInput);
+                mEditTextInput.setText("");
+
+
+            }
+        });
 
         playpause.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -150,13 +152,12 @@ public class RabitaActivity extends AppCompatActivity implements ExampleDialog.E
                 updateCountDownText();
                 updateWatchInterface();
                 reset.setVisibility(View.INVISIBLE);
-
+                soundic();
             }
 
             @Override
             public void onFinish() {
                 timerRunning = false;
-               // playpause.setVisibility(View.VISIBLE);
                Drawable d = getResources().getDrawable(R.drawable.playx);
                playpause.setBackgroundDrawable(d);
                reset.setVisibility(View.VISIBLE);
@@ -166,9 +167,7 @@ public class RabitaActivity extends AppCompatActivity implements ExampleDialog.E
         }.start();
         updateWatchInterface();
         timerRunning = true;
-        soundic();
-       // Drawable s = getResources().getDrawable(R.drawable.pausex);
-       // playpause.setBackgroundDrawable(s);
+
     }
     private void pauseTimer(){
         countDownTimer.cancel();
@@ -182,12 +181,7 @@ public class RabitaActivity extends AppCompatActivity implements ExampleDialog.E
         timeLeftImMillis = mStartTimeInMillis;
         updateCountDownText();
         updateWatchInterface();
-      //  Drawable d = getResources().getDrawable(R.drawable.playx);
-       // playpause.setBackgroundDrawable(d);
-        //playpause.setVisibility(View.VISIBLE);
     }
-
-
 
     private void updateCountDownText() {
         int hours = (int) ((timeLeftImMillis / 1000) /3600);
@@ -206,7 +200,6 @@ public class RabitaActivity extends AppCompatActivity implements ExampleDialog.E
     }
     private void updateWatchInterface(){
         if (timerRunning) {
-            //reset.setVisibility(View.INVISIBLE);
             mEditTextInput.setVisibility(View.INVISIBLE);
             set.setVisibility(View.INVISIBLE);
             @SuppressLint("UseCompatLoadingForDrawables") Drawable q = getResources().getDrawable(R.drawable.pausex);
