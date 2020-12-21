@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
     android:background="@drawable/bacgraund1"
     tools:context=".MainActivity">
 
@@ -12,26 +11,22 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:foregroundGravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <ImageView
-            android:id="@+id/h1x"
-            android:layout_width="188dp"
-            android:layout_height="53dp"
-            android:layout_marginStart="108dp"
-            android:layout_marginTop="244dp"
-            app:srcCompat="@drawable/h1x" />
-
-        <ImageView
-            android:id="@+id/h3"
-            android:layout_width="157dp"
-            android:layout_height="84dp"
-            android:layout_marginStart="104dp"
-            android:layout_marginTop="376dp"
-            app:srcCompat="@drawable/h3" />
+            android:id="@+id/h2"
+            android:layout_width="266dp"
+            android:layout_height="122dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="268dp"
+            app:srcCompat="@drawable/h2" />
 
         <ImageView
             android:id="@+id/h2x"
@@ -42,12 +37,20 @@
             app:srcCompat="@drawable/h2x" />
 
         <ImageView
-            android:id="@+id/h2"
-            android:layout_width="266dp"
-            android:layout_height="122dp"
-            android:layout_marginStart="36dp"
-            android:layout_marginTop="268dp"
-            app:srcCompat="@drawable/h2" />
+            android:id="@+id/h3"
+            android:layout_width="157dp"
+            android:layout_height="84dp"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="376dp"
+            app:srcCompat="@drawable/h3" />
+
+        <ImageView
+            android:id="@+id/h1x"
+            android:layout_width="188dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="108dp"
+            android:layout_marginTop="244dp"
+            app:srcCompat="@drawable/h1x" />
 
         <ImageView
             android:id="@+id/h1"

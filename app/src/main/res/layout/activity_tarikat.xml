@@ -8,20 +8,6 @@
     tools:context=".TarikatActivity">
 
 
-   <!-- <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="406dp"
-        android:layout_height="707dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="19dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="19dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ramarabita" />/-->
-
  <Button
      android:id="@+id/hometarikat"
      android:layout_width="130dp"

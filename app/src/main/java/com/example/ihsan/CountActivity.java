@@ -16,9 +16,9 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 
-public class CountActivity extends AppCompatActivity {
+public class CountActivity extends AppCompatActivity  {
     private TextView mColichestvo;
-    private Button count, reset;
+    private Button count, reset,reset2;
     private ImageView sotca;
     private SharedPreferences mPrefs;
     private MediaPlayer sound;
@@ -29,6 +29,7 @@ public class CountActivity extends AppCompatActivity {
         count = findViewById(R.id.count);
         sotca = findViewById(R.id.sotka);
         reset = findViewById(R.id.reset);
+        reset2 = findViewById(R.id.reset2);
         mColichestvo = findViewById(R.id.colichestvo);
         String id = "ID";
         //click = MediaPlayer.create(this,R.raw.klik);
@@ -51,7 +52,18 @@ public class CountActivity extends AppCompatActivity {
                 //soundPlay(click);
             }
         });
-
+        reset2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mColichestvo.getText().toString().equals("0")){
+                    updateValue(getValue(id) - getValue(id), id);
+                }else {
+                updateValue(getValue(id) - 1, id);
+                }
+                resetImg(id);
+                //soundPlay(click);
+            }
+        });
    }
 
     public void updateValue(int newValue,String id){
@@ -217,7 +229,6 @@ public class CountActivity extends AppCompatActivity {
     public void soundPlay(MediaPlayer sound){
         sound.start();
     }
-
 
 
 }

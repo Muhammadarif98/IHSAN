@@ -11,12 +11,11 @@
         android:id="@+id/dua"
         android:layout_width="170dp"
         android:layout_height="160dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="36dp"
         android:background="@drawable/round1"
-        android:text="Дуа"
         app:layout_constraintBottom_toTopOf="@+id/hizbu"
-        app:layout_constraintEnd_toStartOf="@+id/tavbu"
+        app:layout_constraintEnd_toStartOf="@+id/ismun"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,24 +23,21 @@
         android:id="@+id/tavbu"
         android:layout_width="170dp"
         android:layout_height="160dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="25dp"
-        android:background="@drawable/round1"
-        android:text="Тавбу"
-        app:layout_constraintBottom_toTopOf="@+id/ismun"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/round4"
+        app:layout_constraintBottom_toTopOf="@+id/salavat"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/dua"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/hizbu"
+        app:layout_constraintTop_toBottomOf="@+id/ismun" />
 
     <Button
         android:id="@+id/hizbu"
         android:layout_width="170dp"
         android:layout_height="160dp"
-        android:layout_marginStart="25dp"
-        android:background="@drawable/round1"
-        android:text="Хизбу"
-        app:layout_constraintBottom_toTopOf="@+id/salavat"
-        app:layout_constraintEnd_toStartOf="@+id/ismun"
+        android:layout_marginStart="32dp"
+        android:background="@drawable/round3"
+        app:layout_constraintBottom_toTopOf="@+id/istihara"
+        app:layout_constraintEnd_toStartOf="@+id/tavbu"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dua" />
 
@@ -49,42 +45,40 @@
         android:id="@+id/istihara"
         android:layout_width="170dp"
         android:layout_height="160dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="131dp"
-        android:background="@drawable/round1"
-        android:text="Истихара"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/salavat"
-        app:layout_constraintTop_toBottomOf="@+id/ismun" />
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/round5"
+        app:layout_constraintBottom_toTopOf="@+id/home2"
+        app:layout_constraintEnd_toStartOf="@+id/salavat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hizbu" />
 
     <Button
         android:id="@+id/salavat"
         android:layout_width="170dp"
         android:layout_height="160dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginBottom="131dp"
-        android:background="@drawable/round1"
-        android:text="Салават"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/istihara"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hizbu" />
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/round6"
+        app:layout_constraintBottom_toTopOf="@+id/home2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/istihara"
+        app:layout_constraintTop_toBottomOf="@+id/tavbu" />
 
     <Button
         android:id="@+id/ismun"
         android:layout_width="170dp"
         android:layout_height="160dp"
-        android:layout_marginEnd="25dp"
-        android:background="@drawable/round1"
-        android:text="Имена Аллаха"
-        app:layout_constraintBottom_toTopOf="@+id/istihara"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/round2"
+        app:layout_constraintBottom_toTopOf="@+id/tavbu"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/hizbu"
-        app:layout_constraintTop_toBottomOf="@+id/tavbu" />
+        app:layout_constraintStart_toEndOf="@+id/dua"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/home2"
         android:layout_width="110dp"
         android:layout_height="110dp"
         android:layout_marginStart="155dp"

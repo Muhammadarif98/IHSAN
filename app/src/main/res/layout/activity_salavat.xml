@@ -4,6 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#79B638"
     tools:context=".SalavatActivity">
 
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:id="@+id/salavatp"
+                android:layout_height="450dp"
+                android:layout_marginTop="10dp">
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/salavatn"
+                android:layout_width="match_parent"
+                android:layout_height="450dp"
+                android:layout_marginBottom="10dp">
+
+            </ImageView>
+            <ImageView
+                android:id="@+id/salavatf"
+                android:layout_width="match_parent"
+                android:layout_height="450dp"
+                android:layout_marginBottom="10dp">
+            </ImageView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

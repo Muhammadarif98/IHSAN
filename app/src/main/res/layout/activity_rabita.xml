@@ -98,8 +98,8 @@
 
     <EditText
         android:id="@+id/editTextInput"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="51dp"
+        android:layout_height="40dp"
         android:ems="10"
         android:inputType="number"
         android:visibility="visible"
@@ -107,18 +107,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textV" />
 
-    <!-- <Button
-        android:id="@+id/button7"
-        android:layout_width="68dp"
-        android:layout_height="58dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="136dp"
-        android:text="home"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/but5"
-        app:layout_constraintHorizontal_bias="0.953"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/five"
-        app:layout_constraintVertical_bias="1.0" />/!-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

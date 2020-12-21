@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" android:drawable="@drawable/hizpress" /> нажата
+    <item android:state_focused="true" android:drawable="@drawable/hizbutton" /> не нажата
+    <shape android:shape="oval"></shape>
+    <item android:drawable="@drawable/hizbutton"></item>
+</selector>

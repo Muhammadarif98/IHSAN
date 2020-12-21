@@ -19,7 +19,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,7 +30,7 @@ public class RabitaActivity extends AppCompatActivity implements ExampleDialog.E
    private TextView textV;
    private Button playpause, reset,home,set;
    private long mStartTimeInMillis;
-   private EditText mEditTextInput;;
+   private EditText mEditTextInput;
    private MediaPlayer sound;
    private boolean timerRunning;
    private long timeLeftImMillis;
@@ -82,7 +81,7 @@ public class RabitaActivity extends AppCompatActivity implements ExampleDialog.E
                 }
             });
         }
-
+// КНОПКА ВЫБОРА МИНУТ ДЛЯ ТАЙМЕРА
         set.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -102,7 +101,7 @@ public class RabitaActivity extends AppCompatActivity implements ExampleDialog.E
 
             }
         });
-
+// КНОПКА СТАРТ СТОП ДЛЯ ТАЙМЕРА
         playpause.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -113,7 +112,7 @@ public class RabitaActivity extends AppCompatActivity implements ExampleDialog.E
                 }
             }
         });
-
+// КНОПКА СБРОС
         reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -122,7 +121,7 @@ public class RabitaActivity extends AppCompatActivity implements ExampleDialog.E
         });
 
     }
-
+ // ЦВЕТ ТАЙМЕРА ПО ГРАДИЕНТУ ИЗ 4-х ЦВЕТОВ
     private void setTextGradientColour(){
         TextPaint paint = textV.getPaint();
         float width = paint.measureText("00:00");
@@ -136,14 +135,14 @@ public class RabitaActivity extends AppCompatActivity implements ExampleDialog.E
                 },null, Shader.TileMode.CLAMP);
                 textV.getPaint().setShader(shader);
     }
-
+//МЕТОД ДЛЯ КНОПКИ SET
     private void setTime(long milliseconds){
         mStartTimeInMillis = milliseconds;
         resetTimer();
         closeKeyboard();
 
     }
-
+//МЕТОД ДЛЯ СТРАТА ТАЙМЕРА
     private void startTimer(){
         countDownTimer = new CountDownTimer(timeLeftImMillis,1000) {
             @Override
@@ -152,7 +151,7 @@ public class RabitaActivity extends AppCompatActivity implements ExampleDialog.E
                 updateCountDownText();
                 updateWatchInterface();
                 reset.setVisibility(View.INVISIBLE);
-                soundic();
+
             }
 
             @Override
@@ -165,10 +164,12 @@ public class RabitaActivity extends AppCompatActivity implements ExampleDialog.E
                soundic();
             }
         }.start();
+        soundic();
         updateWatchInterface();
         timerRunning = true;
 
     }
+    // МЕТОД ДЛЯ ПАУЗЫ ТАЙМЕРА
     private void pauseTimer(){
         countDownTimer.cancel();
         updateWatchInterface();
@@ -177,12 +178,13 @@ public class RabitaActivity extends AppCompatActivity implements ExampleDialog.E
         Drawable d = getResources().getDrawable(R.drawable.playx);
         playpause.setBackgroundDrawable(d);
     }
+    // МЕТОД ДЛЯ СБРОСА ТАЙМЕРА
     private void resetTimer(){
         timeLeftImMillis = mStartTimeInMillis;
         updateCountDownText();
         updateWatchInterface();
     }
-
+//МЕТОД ДЛЯ РАБОТЫ ТАЙМЕРА
     private void updateCountDownText() {
         int hours = (int) ((timeLeftImMillis / 1000) /3600);
         int minutes = (int) ((timeLeftImMillis / 1000) % 3600) / 60;
@@ -198,6 +200,7 @@ public class RabitaActivity extends AppCompatActivity implements ExampleDialog.E
         }
         textV.setText(timeLeftFormatted);
     }
+    //МЕТОД ОБНОВЛЕНИЯ
     private void updateWatchInterface(){
         if (timerRunning) {
             mEditTextInput.setVisibility(View.INVISIBLE);
@@ -231,16 +234,20 @@ public class RabitaActivity extends AppCompatActivity implements ExampleDialog.E
             imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
         }
     }
+    //МЕТОД ЧТОБЫ ВЕРНУТСЯ НАЗАД ПО КНОПКЕ
     public void home(){
         Intent intent = new Intent(this,TarikatActivity.class);
         startActivity(intent);
     }
+    // МЕТОД ДЛЯ РАБОТЫ СО ЗВУКОМ
     public void soundPlay(MediaPlayer sound){
         sound.start();
     }
+    // МЕТОД ДЛЯ ЗВУКА ПРИ ОКОНЧАНИ ТАЙМЕРА
     public void soundic(){
         soundPlay(sound);
     }
+    //ДИАЛОГОВОЕ ОКНО
     public void openDialog() {
         ExampleDialog dialog = new ExampleDialog();
         dialog.show(getSupportFragmentManager(), "example dialog");
@@ -251,6 +258,7 @@ public class RabitaActivity extends AppCompatActivity implements ExampleDialog.E
             home();
             sound.pause();
     }
+    // ПРИ НАЖАТИИ НА КНОПКУ НАЗАД САМОГО АНДРОИДА
     @Override
     public void onBackPressed(){
         openDialog();
