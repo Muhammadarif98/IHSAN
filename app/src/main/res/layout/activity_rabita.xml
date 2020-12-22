@@ -46,7 +46,7 @@
     <Button
         android:id="@+id/home"
         android:layout_width="71dp"
-        android:layout_height="71dp"
+        android:layout_height="74dp"
         android:background="@drawable/circle_4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -58,7 +58,7 @@
     <Button
         android:id="@+id/reset"
         android:layout_width="71dp"
-        android:layout_height="71dp"
+        android:layout_height="74dp"
         android:background="@drawable/circle_3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -85,21 +85,20 @@
 
     <Button
         android:id="@+id/set"
-        android:layout_width="50dp"
-        android:layout_height="53dp"
+        android:layout_width="51dp"
+        android:layout_height="54dp"
         android:background="@drawable/set"
         android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/playpause"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextInput"
-        app:layout_constraintVertical_bias="0.351" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/editTextInput"
-        android:layout_width="51dp"
-        android:layout_height="40dp"
+        android:layout_width="29dp"
+        android:layout_height="42dp"
         android:ems="10"
         android:inputType="number"
         android:visibility="visible"

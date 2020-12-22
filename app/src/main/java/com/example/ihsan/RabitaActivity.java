@@ -156,7 +156,7 @@ public class RabitaActivity extends AppCompatActivity implements ExampleDialog.E
 
             @Override
             public void onFinish() {
-                timerRunning = false;
+               timerRunning = false;
                Drawable d = getResources().getDrawable(R.drawable.playx);
                playpause.setBackgroundDrawable(d);
                reset.setVisibility(View.VISIBLE);

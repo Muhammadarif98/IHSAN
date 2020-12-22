@@ -2,21 +2,87 @@ package com.example.ihsan;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.MotionEvent;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.SeekBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
+import java.util.Locale;
+
 public class HizbuActivity extends AppCompatActivity {
+    private  ImageView imagePlayPause;
+    private TextView textCurentTime,textTotalDuration;
+    private SeekBar playerSeekBar;
+    private MediaPlayer mediaPlayer;
+    private Handler handler = new Handler();
+
     private ImageView imageView,imageView2,imageView3,imageView4,imageView5,imageView6,imageView7,imageView8,imageView9,imageView10,imageView11;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hizbu);
 
+        imagePlayPause = findViewById(R.id.imagePlayPause);
+        textCurentTime = findViewById(R.id.textCurrentTime);
+        textTotalDuration = findViewById(R.id.textTotalDuration);
+        playerSeekBar = findViewById(R.id.playerSeekBar);
+        mediaPlayer = MediaPlayer.create(this,R.raw.hizbu1);
+        playerSeekBar.setMax(100);
 
+        imagePlayPause.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               if(mediaPlayer.isPlaying()){
+                   handler.removeCallbacks(updater);
+                   mediaPlayer.pause();
+                   imagePlayPause.setImageResource(R.drawable.playh);
+               }else {
+                   mediaPlayer.start();
+                   imagePlayPause.setImageResource(R.drawable.pauseh);
+                   updateSeekBar();
+               }
+            }
+        });
 
+        prepareMediaPlayer();
+
+        playerSeekBar.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                SeekBar seekBar = (SeekBar) v;
+                int playposition = (mediaPlayer.getDuration() / 100) * seekBar.getProgress();
+                mediaPlayer.seekTo(playposition);
+                textCurentTime.setText(milliSecondsToTimer(mediaPlayer.getCurrentPosition()));
+                return false;
+            }
+        });
+
+        mediaPlayer.setOnBufferingUpdateListener(new MediaPlayer.OnBufferingUpdateListener() {
+            @Override
+            public void onBufferingUpdate(MediaPlayer mp, int percent) {
+                playerSeekBar.setSecondaryProgress(percent);
+            }
+        });
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                playerSeekBar.setProgress(0);
+                imagePlayPause.setImageResource(R.drawable.playh);
+                textCurentTime.setText(R.string.zero);
+                textTotalDuration.setText(R.string.zero);
+                mediaPlayer.reset();
+                prepareMediaPlayer();
+            }
+        });
 
         { Toast.makeText(this,"Требуется подключение к интернету",Toast.LENGTH_LONG).show();
         String imageUri11 ="https://i.ibb.co/z8GPZJF/hiz11.png";
@@ -52,5 +118,53 @@ public class HizbuActivity extends AppCompatActivity {
         Picasso.get().load(imageUri3).fit().into(imageView3);
         Picasso.get().load(imageUri2).fit().into(imageView2);
         Picasso.get().load(imageUri).fit().into(imageView);}
+    }
+    // https://files.fm/f/c9bwethkj
+   private void prepareMediaPlayer(){
+        try{
+            //mediaPlayer.setDataSource("https://files.fm/pa/marip55598/hizbu_imama_an_Navavi__%28hewbi.com%29.mp3/hizbu_imama_an_Navavi__%28hewbi.com%29.mp3");
+            mediaPlayer.prepare();
+            textTotalDuration.setText(milliSecondsToTimer(mediaPlayer.getDuration()));
+        }catch(Exception exception){
+            Toast.makeText(this, exception.getMessage(),Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private Runnable updater = new Runnable() {
+        @Override
+        public void run() {
+            updateSeekBar();
+            long currentDuration = mediaPlayer.getCurrentPosition();
+            textCurentTime.setText(milliSecondsToTimer(currentDuration));
+
+        }
+    };
+
+    private void updateSeekBar(){
+        if (mediaPlayer.isPlaying()){
+            playerSeekBar.setProgress((int)(((float) mediaPlayer.getCurrentPosition() / mediaPlayer.getDuration()) * 100));
+            handler.postDelayed(updater,1000);
+        }
+    }
+
+    private String milliSecondsToTimer(long milliseconds){
+       String timerString = "";
+       String secondsString ;
+
+        int hours = (int)(milliseconds / (1000*60*60));
+        int minutes = (int)(milliseconds % (1000*60*60)) / (1000*60);
+        int seconds = (int)(milliseconds % (1000*60*60)) % ((1000*60) / 1000);
+
+        if(hours > 0){
+            timerString = hours +":";
+        }
+        if(seconds < 10){
+            secondsString = "0" + seconds;
+        }else {
+            secondsString = "" + seconds;
+        }
+        timerString = timerString + minutes + ":" + secondsString;
+
+        return  timerString;
     }
 }
