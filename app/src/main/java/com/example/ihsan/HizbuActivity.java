@@ -3,6 +3,7 @@ package com.example.ihsan;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
@@ -44,8 +45,10 @@ public class HizbuActivity extends AppCompatActivity {
                    handler.removeCallbacks(updater);
                    mediaPlayer.pause();
                    imagePlayPause.setImageResource(R.drawable.playh);
+
                }else {
                    mediaPlayer.start();
+                   textTotalDuration.setText(R.string.zero2);
                    imagePlayPause.setImageResource(R.drawable.pauseh);
                    updateSeekBar();
                }
@@ -79,15 +82,15 @@ public class HizbuActivity extends AppCompatActivity {
                 imagePlayPause.setImageResource(R.drawable.playh);
                 textCurentTime.setText(R.string.zero);
                 textTotalDuration.setText(R.string.zero);
-                mediaPlayer.reset();
+                //mediaPlayer.reset();
                 prepareMediaPlayer();
             }
         });
 
-        { Toast.makeText(this,"Требуется подключение к интернету",Toast.LENGTH_LONG).show();
+        { Toast.makeText(this,"Для просмотра изображений подключите интернет",Toast.LENGTH_LONG).show();
         String imageUri11 ="https://i.ibb.co/z8GPZJF/hiz11.png";
         String imageUri10 ="https://i.ibb.co/jGxM8Y9/hiz10.png";
-        String imageUri9 ="https://i.ibb.co/cDRhRZw/hiz9.png";
+        String imageUri9 ="https://i.ibb.co/wpbG5C2/hiz9.png";
         String imageUri8 ="https://i.ibb.co/Jy4d6hS/hiz8.png";
         String imageUri7 ="https://i.ibb.co/b6PHcQS/hiz7.png";
         String imageUri6 ="https://i.ibb.co/k0sNW89/hiz6.png";
@@ -148,23 +151,32 @@ public class HizbuActivity extends AppCompatActivity {
     }
 
     private String milliSecondsToTimer(long milliseconds){
+        Long timeLefts = milliseconds;
        String timerString = "";
        String secondsString ;
 
-        int hours = (int)(milliseconds / (1000*60*60));
-        int minutes = (int)(milliseconds % (1000*60*60)) / (1000*60);
-        int seconds = (int)(milliseconds % (1000*60*60)) % ((1000*60) / 1000);
+        int minutes = (int)(timeLefts % (1000*3600)) / (1000*60);
+        int seconds = (int)(timeLefts / 1000) % 60;
 
-        if(hours > 0){
-            timerString = hours +":";
-        }
         if(seconds < 10){
             secondsString = "0" + seconds;
-        }else {
+        }
+        else {
+
             secondsString = "" + seconds;
         }
-        timerString = timerString + minutes + ":" + secondsString;
+        timerString = timerString + minutes + ":" + secondsString ;
 
         return  timerString;
+    }
+    public void home3(){
+        Intent intent = new Intent(this,PoleActivity.class);
+        startActivity(intent);
+    }
+    @Override
+    public void onBackPressed(){
+        home3();
+        mediaPlayer.pause();
+
     }
 }

@@ -2,6 +2,8 @@
     <string name="app_name">Ихсан</string>
     <string name="ihsan">Ихсан</string>
     <string name="zero">0:00</string>
+    <string name="zero3">3:31</string>
+    <string name="zero2">9:24</string>
     <string-array name="Spinner_items">
         <item>Первая Картина</item>
         <item>Вторая Картина</item>
